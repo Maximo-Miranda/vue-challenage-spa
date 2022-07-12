@@ -8,6 +8,12 @@ const router = new Router({
     base: process.env.BASE_URL,
     routes: [
         {
+            path: '/',
+            name: 'home',
+            component: () =>
+                import ( /* webpackChunkName: "about" */ './components/Product')
+        },
+        {
             path: '/product',
             name: 'product',
             component: () =>
